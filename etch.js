@@ -13,6 +13,7 @@ function testFunction(e) {
 }
 
 const container = document.querySelector('#container');
+//TODO: Add black border w/ curved corner edges
 
 let grid = [];
 
@@ -29,5 +30,14 @@ for(let i = 0; i < 256; i++){
 	grid[i].addEventListener('mouseover', testFunction);
 	container.appendChild(grid[i]);
 }
+
+const clearButton = document.createElement('button');
+clearButton.textContent = "CLEAR";
+clearButton.addEventListener('click', function() {
+	for(let i = 0; i < 256; i++){
+		grid[i].style.background = 'white';
+	}
+});
+clear.appendChild(clearButton);
 
 //addEventListener(onClick)
