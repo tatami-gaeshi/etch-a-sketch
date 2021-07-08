@@ -46,9 +46,8 @@ clearButton.addEventListener('click', function() {
 		if(regex.test(input)){
 
 			removeNodes(grid, container, dims);
+			dims = input;
 			createGrid(grid, container, input);
-
-
 			
 		}
 		else {
@@ -56,5 +55,3 @@ clearButton.addEventListener('click', function() {
 		}
 });
 clear.appendChild(clearButton);
-
-//addEventListener(onClick)
